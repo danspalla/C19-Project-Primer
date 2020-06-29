@@ -165,28 +165,59 @@ Each Git repository has its own history that details which files have changed, w
 \section{Initializing a Repository For a New Project}\label{initializing-a-repository-for-a-new-project}}
 
 If you haven't yet created a new project in RStudio, you can check the ``Create a git repository'' box in the new project wizard to automatically create one for you.
+
 \includegraphics{images/02-newgit_1.png}
 
 If you already have an existing project but wish to initialize a Git repository for it, its quite simple.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
+\tightlist
 \item
   Select ``Tools'' from the toolbar, ``Version Control'', and click on ``Project Setup\ldots{}''
-  \includegraphics{images/02-newgit_2.png}
+\end{enumerate}
+
+\includegraphics{images/02-newgit_2.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
 \item
   Select ``Git'' from the dropdown box
-  \includegraphics{images/02-newgit_3.png}
+\end{enumerate}
+
+\includegraphics{images/02-newgit_3.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
 \item
   Confirm that you want to create a new Git repository
-  \includegraphics{images/02-newgit_4.png}
+\end{enumerate}
+
+\includegraphics{images/02-newgit_4.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
 \item
   It may ask you to restart RStudio; restart RStudio
-  \includegraphics{images/02-newgit_5.png}
+\end{enumerate}
+
+\includegraphics{images/02-newgit_5.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
 \item
   The Git tab will appear on the top-right window and show the status of your new repository
-  \includegraphics{images/02-newgit_6.png}
 \end{enumerate}
+
+\includegraphics{images/02-newgit_6.png}
 
 \hypertarget{creating-a-project-from-a-git-repository}{%
 \section{Creating a Project From a Git Repository}\label{creating-a-project-from-a-git-repository}}
@@ -231,9 +262,17 @@ To make changes to files in a git repository, modify them you would any other fi
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
+\tightlist
 \item
   Hit the commit button under the Git tab and a new window will appear
-  \includegraphics{images/02-commit_1.png}
+\end{enumerate}
+
+\includegraphics{images/02-commit_1.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
 \item
   Select, stage, the changed files that you wish to add and commit
 \end{enumerate}
@@ -439,23 +478,21 @@ Scenario: Create an interactive overview map for the US to show which states are
 \tightlist
 \item
   Obtain the state data on DCTT, put the file in the ``/data'' directory
-  \includegraphics{images/04-example2_1.png}
-\item
-  Place the shapefile that will be used in the ``/data'' folder as well
-\item
-  Write an R script to generate the interactive map and place it in the ``/scripts'' directory
-  \includegraphics{images/04-example2_2.png}
-\item
-  Modify the RMarkdown document on the page we want to display the map, and add the location of the script
-  \includegraphics{images/04-example2_3.png}
-\item
-  Run the ``website\_preview.R'' from the ``/scripts'' directory to preview the map locally
-  \includegraphics{images/04-example2_4.png}
-\item
-  Commit the changes to the ``/data'', ``/scripts'', ``website'', and ``/docs'' directories to your local repository
-\item
-  Push the changes to the GitHub repository to update the website and share the interactive map with the team
 \end{enumerate}
+
+\includegraphics{images/04-example2_1.png}
+2. Place the shapefile that will be used in the ``/data'' folder as well
+3. Write an R script to generate the interactive map and place it in the ``/scripts'' directory
+
+\includegraphics{images/04-example2_2.png}
+4. Modify the RMarkdown document on the page we want to display the map, and add the location of the script
+
+\includegraphics{images/04-example2_3.png}
+5. Run the ``website\_preview.R'' from the ``/scripts'' directory to preview the map locally
+
+\includegraphics{images/04-example2_4.png}
+6. Commit the changes to the ``/data'', ``/scripts'', ``website'', and ``/docs'' directories to your local repository
+7. Push the changes to the GitHub repository to update the website and share the interactive map with the team
 
 \hypertarget{appendix-resources}{%
 \chapter*{Appendix \& Resources}\label{appendix-resources}}
