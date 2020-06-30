@@ -74,3 +74,41 @@ Scenario: Create an interactive overview map for the US to show which states are
 6. Commit the changes to the "/data", "/scripts", "website", and "/docs" directories to your local repository
 7. Push the changes to the GitHub repository to update the website and share the interactive map with the team
 
+## Creating a New Page
+Creating a new page for the website requires a number of changes across the website source files.
+
+1. Create a new RMarkdown file from the "File -> New File" menu.
+
+![](images/04-newpage_1.png)
+
+2. Give the file an appropriate title and make sure HTML is the output format
+
+![](images/04-newpage_2.png)
+
+3. Save the file in the content directory: "/website/content/"
+
+![](images/04-newpage_4.png)
+
+4. Open the "config.toml" configuration file located in "/website/"
+
+![](images/04-newpage_3.png)
+
+5. Add the following entry to the configuration file to add the page to the navigation bar 
+
+>[[menu.main]]
+>
+>>    url = "/page_file_name/"
+>>
+>>    name = "Pretty Page Name"
+>>
+>>    weight = 5
+
++ Note: The "url" should match the RMarkdown file name exactly, the "name" will be the name that appears on the website, and the weight (relative to other pages) will specify the order that the page will appear on the navigation bar
+
+![](images/04-newpage_5.png)
+
+6. Run the "website_preview.R" script to build and preview the changes
+
+## Creating a New Update Post
+Detail how to create a new update post here.
+
