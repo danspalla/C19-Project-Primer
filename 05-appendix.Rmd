@@ -5,6 +5,13 @@
 
 [Additional Git Documentation](https://git-scm.com/doc).
 
+## Markdown {-}
+[Markdown Syntax Cheat sheet](https://www.markdownguide.org/cheat-sheet/)
+
+[Markdown Syntax](https://www.markdownguide.org/basic-syntax)
+
+[Markdown Introductory Tutorial](https://www.markdowntutorial.com/lesson/1/)
+
 ## R {-}
 [Download R](https://cloud.r-project.org/).
 
