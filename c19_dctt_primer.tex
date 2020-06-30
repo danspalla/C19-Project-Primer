@@ -73,7 +73,7 @@
 
 \title{Project Primer}
 \author{Dan Spalla}
-\date{2020-06-29}
+\date{2020-06-30}
 
 \begin{document}
 \maketitle
@@ -325,6 +325,11 @@ You can click on each commit, read each commit changes, and see what files in th
 \hypertarget{rmarkdown-introduction}{%
 \chapter{RMarkdown Introduction}\label{rmarkdown-introduction}}
 
+\hypertarget{what-is-markdown}{%
+\section{What is Markdown?}\label{what-is-markdown}}
+
+Markdown is a markup language that enables a user to type a certain syntax and always generate the same output documents. There are no hidden characters or special formatting, that you would inevitably encounter using a word processor, which could cause unwanted changes to appearance of a document. Please see the, ``Markdown Introductory Tutorial'' in the appendix for a basic interactive tutorial.
+
 \hypertarget{what-is-rmarkdown}{%
 \section{What is RMarkdown?}\label{what-is-rmarkdown}}
 
@@ -494,6 +499,148 @@ Scenario: Create an interactive overview map for the US to show which states are
 6. Commit the changes to the ``/data'', ``/scripts'', ``website'', and ``/docs'' directories to your local repository
 7. Push the changes to the GitHub repository to update the website and share the interactive map with the team
 
+\hypertarget{creating-a-new-page}{%
+\section{Creating a New Page}\label{creating-a-new-page}}
+
+Creating a new page for the website requires a number of changes across the website source files.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Create a new RMarkdown file from the ``File -\textgreater{} New File'' menu.
+\end{enumerate}
+
+\includegraphics{images/04-newpage_1.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Give the file an appropriate title and make sure HTML is the output format
+\end{enumerate}
+
+\includegraphics{images/04-newpage_2.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Save the file in the content directory: ``/website/content/''
+\end{enumerate}
+
+\includegraphics{images/04-newpage_4.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Open the ``config.toml'' configuration file located in ``/website/''
+\end{enumerate}
+
+\includegraphics{images/04-newpage_3.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Add the following entry to the configuration file to add the page to the navigation bar
+\end{enumerate}
+
+\begin{quote}
+{[}{[}menu.main{]}{]}
+
+\begin{quote}
+url = ``/page\_file\_name/''
+
+name = ``Pretty Page Name''
+
+weight = 5
+\end{quote}
+\end{quote}
+
+\begin{itemize}
+\tightlist
+\item
+  Note: The ``url'' should match the RMarkdown file name exactly, the ``name'' will be the name that appears on the website, and the weight (relative to other pages) will specify the order that the page will appear on the navigation bar
+\end{itemize}
+
+\includegraphics{images/04-newpage_5.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Run the ``website\_preview.R'' script to build and preview the changes
+\end{enumerate}
+
+\hypertarget{creating-a-new-update-post}{%
+\section{Creating a New Update Post}\label{creating-a-new-update-post}}
+
+Creating a new update post for the website consists of a few steps.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Change your working directory to the ``/website/'' directory if you haven't already
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Note: Using the R package `here' makes this even easier
+\end{itemize}
+
+\begin{quote}
+setwd(here(``website''))
+
+or
+
+setwd(``./website'') \# assumes you are in project root
+\end{quote}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Use the blogdown function ``new\_post'' to generate the new post
+\end{enumerate}
+
+\begin{quote}
+blogdown::new\_post(``Update Post Title'', subdir = ``updates'')
+\end{quote}
+
+\begin{itemize}
+\tightlist
+\item
+  Note: Blogdown is a layer on-top of a static site generator Hugo which uses the ``posts'' directory for all new posts. You have to specify `subdir = ``updates''\,' to get the new posts to appear in the ``updates'' directory; otherwise you will have to move your Markdown post from the ``posts'' directory to the ``updates'' directory.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  A new Markdown file will open with your specified title and a template for the post
+\end{enumerate}
+
+\includegraphics{images/04-newpost_1.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Modify the post file to your liking and run the ``website\_preview.R'' script to preview the changes
+\end{enumerate}
+
 \hypertarget{appendix-resources}{%
 \chapter*{Appendix \& Resources}\label{appendix-resources}}
 \addcontentsline{toc}{chapter}{Appendix \& Resources}
@@ -505,6 +652,16 @@ Scenario: Create an interactive overview map for the US to show which states are
 \href{https://git-scm.com/downloads}{Download Git}.
 
 \href{https://git-scm.com/doc}{Additional Git Documentation}.
+
+\hypertarget{markdown}{%
+\section*{Markdown}\label{markdown}}
+\addcontentsline{toc}{section}{Markdown}
+
+\href{https://www.markdownguide.org/cheat-sheet/}{Markdown Syntax Cheat sheet}
+
+\href{https://www.markdownguide.org/basic-syntax}{Markdown Syntax}
+
+\href{https://www.markdowntutorial.com/lesson/1/}{Markdown Introductory Tutorial}
 
 \hypertarget{r}{%
 \section*{R}\label{r}}

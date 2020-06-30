@@ -24,7 +24,7 @@
 <meta name="author" content="Dan Spalla" />
 
 
-<meta name="date" content="2020-06-29" />
+<meta name="date" content="2020-06-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -92,8 +92,9 @@
 </ul></li>
 <li class="chapter" data-level="3" data-path="rmarkdown-introduction.html"><a href="rmarkdown-introduction.html"><i class="fa fa-check"></i><b>3</b> RMarkdown Introduction</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="rmarkdown-introduction.html"><a href="rmarkdown-introduction.html#what-is-rmarkdown"><i class="fa fa-check"></i><b>3.1</b> What is RMarkdown?</a></li>
-<li class="chapter" data-level="3.2" data-path="rmarkdown-introduction.html"><a href="rmarkdown-introduction.html#r-code-in-rmarkdown"><i class="fa fa-check"></i><b>3.2</b> R Code in RMarkdown</a></li>
+<li class="chapter" data-level="3.1" data-path="rmarkdown-introduction.html"><a href="rmarkdown-introduction.html#what-is-markdown"><i class="fa fa-check"></i><b>3.1</b> What is Markdown?</a></li>
+<li class="chapter" data-level="3.2" data-path="rmarkdown-introduction.html"><a href="rmarkdown-introduction.html#what-is-rmarkdown"><i class="fa fa-check"></i><b>3.2</b> What is RMarkdown?</a></li>
+<li class="chapter" data-level="3.3" data-path="rmarkdown-introduction.html"><a href="rmarkdown-introduction.html#r-code-in-rmarkdown"><i class="fa fa-check"></i><b>3.3</b> R Code in RMarkdown</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="contribution-to-project.html"><a href="contribution-to-project.html"><i class="fa fa-check"></i><b>4</b> Contribution to Project</a>
 <ul>
@@ -104,10 +105,13 @@
 <li class="chapter" data-level="4.5" data-path="contribution-to-project.html"><a href="contribution-to-project.html#getting-started-with-contribution"><i class="fa fa-check"></i><b>4.5</b> Getting Started With Contribution</a></li>
 <li class="chapter" data-level="4.6" data-path="contribution-to-project.html"><a href="contribution-to-project.html#contribution-example-1"><i class="fa fa-check"></i><b>4.6</b> Contribution Example 1</a></li>
 <li class="chapter" data-level="4.7" data-path="contribution-to-project.html"><a href="contribution-to-project.html#contribution-example-2"><i class="fa fa-check"></i><b>4.7</b> Contribution Example 2</a></li>
+<li class="chapter" data-level="4.8" data-path="contribution-to-project.html"><a href="contribution-to-project.html#creating-a-new-page"><i class="fa fa-check"></i><b>4.8</b> Creating a New Page</a></li>
+<li class="chapter" data-level="4.9" data-path="contribution-to-project.html"><a href="contribution-to-project.html#creating-a-new-update-post"><i class="fa fa-check"></i><b>4.9</b> Creating a New Update Post</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="appendix-resources.html"><a href="appendix-resources.html"><i class="fa fa-check"></i>Appendix &amp; Resources</a>
 <ul>
 <li class="chapter" data-level="" data-path="appendix-resources.html"><a href="appendix-resources.html#git"><i class="fa fa-check"></i>Git</a></li>
+<li class="chapter" data-level="" data-path="appendix-resources.html"><a href="appendix-resources.html#markdown"><i class="fa fa-check"></i>Markdown</a></li>
 <li class="chapter" data-level="" data-path="appendix-resources.html"><a href="appendix-resources.html#r"><i class="fa fa-check"></i>R</a></li>
 <li class="chapter" data-level="" data-path="appendix-resources.html"><a href="appendix-resources.html#rmarkdown"><i class="fa fa-check"></i>RMarkdown</a></li>
 <li class="chapter" data-level="" data-path="appendix-resources.html"><a href="appendix-resources.html#rstudio"><i class="fa fa-check"></i>RStudio</a></li>
@@ -135,15 +139,19 @@
             <section class="normal" id="section-">
 <div id="rmarkdown-introduction" class="section level1" number="3">
 <h1><span class="header-section-number">Chapter 3</span> RMarkdown Introduction</h1>
-<div id="what-is-rmarkdown" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> What is RMarkdown?</h2>
+<div id="what-is-markdown" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> What is Markdown?</h2>
+<p>Markdown is a markup language that enables a user to type a certain syntax and always generate the same output documents. There are no hidden characters or special formatting, that you would inevitably encounter using a word processor, which could cause unwanted changes to appearance of a document. Please see the, “Markdown Introductory Tutorial” in the appendix for a basic interactive tutorial.</p>
+</div>
+<div id="what-is-rmarkdown" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> What is RMarkdown?</h2>
 <p>RMarkdown is an extension of the Markdown markup language that allows the user to embed R code in Markdown documents. A markup language is a simple set of syntax that when written will always produce the same output document (as opposed to WYSIWYG editors). RMarkdown extends this by embedding R code into the documents, showcasing the source code, a R script’s output, and any figures generated by the R script.</p>
 <p>Example of source code and output below.</p>
 <p><img src="images/03-rmarkdown_1.png" /></p>
 <p><img src="images/03-rmarkdown_2.png" /></p>
 </div>
-<div id="r-code-in-rmarkdown" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> R Code in RMarkdown</h2>
+<div id="r-code-in-rmarkdown" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> R Code in RMarkdown</h2>
 <p>There are two ways to include R code in an RMarkdown document. The first is to simply inline the code in the document itself and compile the document. The second way is to load the code from a file instead of inlining in the document. Loading the code from a file provides a nice separation between the data processing and data presentation of a R script. The second method should be used if the R code is lengthy, complicated, or needs to be worked on independent of successful RMarkdown document compilation.</p>
 <p>To load a R script from a file, simply add “code = readlines(”location_to_file“)” and specify the path to the file.</p>
 <p><img src="images/04-example2_3.png" /></p>

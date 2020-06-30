@@ -24,7 +24,7 @@
 <meta name="author" content="Dan Spalla" />
 
 
-<meta name="date" content="2020-06-29" />
+<meta name="date" content="2020-06-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -92,8 +92,9 @@
 </ul></li>
 <li class="chapter" data-level="3" data-path="rmarkdown-introduction.html"><a href="rmarkdown-introduction.html"><i class="fa fa-check"></i><b>3</b> RMarkdown Introduction</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="rmarkdown-introduction.html"><a href="rmarkdown-introduction.html#what-is-rmarkdown"><i class="fa fa-check"></i><b>3.1</b> What is RMarkdown?</a></li>
-<li class="chapter" data-level="3.2" data-path="rmarkdown-introduction.html"><a href="rmarkdown-introduction.html#r-code-in-rmarkdown"><i class="fa fa-check"></i><b>3.2</b> R Code in RMarkdown</a></li>
+<li class="chapter" data-level="3.1" data-path="rmarkdown-introduction.html"><a href="rmarkdown-introduction.html#what-is-markdown"><i class="fa fa-check"></i><b>3.1</b> What is Markdown?</a></li>
+<li class="chapter" data-level="3.2" data-path="rmarkdown-introduction.html"><a href="rmarkdown-introduction.html#what-is-rmarkdown"><i class="fa fa-check"></i><b>3.2</b> What is RMarkdown?</a></li>
+<li class="chapter" data-level="3.3" data-path="rmarkdown-introduction.html"><a href="rmarkdown-introduction.html#r-code-in-rmarkdown"><i class="fa fa-check"></i><b>3.3</b> R Code in RMarkdown</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="contribution-to-project.html"><a href="contribution-to-project.html"><i class="fa fa-check"></i><b>4</b> Contribution to Project</a>
 <ul>
@@ -104,10 +105,13 @@
 <li class="chapter" data-level="4.5" data-path="contribution-to-project.html"><a href="contribution-to-project.html#getting-started-with-contribution"><i class="fa fa-check"></i><b>4.5</b> Getting Started With Contribution</a></li>
 <li class="chapter" data-level="4.6" data-path="contribution-to-project.html"><a href="contribution-to-project.html#contribution-example-1"><i class="fa fa-check"></i><b>4.6</b> Contribution Example 1</a></li>
 <li class="chapter" data-level="4.7" data-path="contribution-to-project.html"><a href="contribution-to-project.html#contribution-example-2"><i class="fa fa-check"></i><b>4.7</b> Contribution Example 2</a></li>
+<li class="chapter" data-level="4.8" data-path="contribution-to-project.html"><a href="contribution-to-project.html#creating-a-new-page"><i class="fa fa-check"></i><b>4.8</b> Creating a New Page</a></li>
+<li class="chapter" data-level="4.9" data-path="contribution-to-project.html"><a href="contribution-to-project.html#creating-a-new-update-post"><i class="fa fa-check"></i><b>4.9</b> Creating a New Update Post</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="appendix-resources.html"><a href="appendix-resources.html"><i class="fa fa-check"></i>Appendix &amp; Resources</a>
 <ul>
 <li class="chapter" data-level="" data-path="appendix-resources.html"><a href="appendix-resources.html#git"><i class="fa fa-check"></i>Git</a></li>
+<li class="chapter" data-level="" data-path="appendix-resources.html"><a href="appendix-resources.html#markdown"><i class="fa fa-check"></i>Markdown</a></li>
 <li class="chapter" data-level="" data-path="appendix-resources.html"><a href="appendix-resources.html#r"><i class="fa fa-check"></i>R</a></li>
 <li class="chapter" data-level="" data-path="appendix-resources.html"><a href="appendix-resources.html#rmarkdown"><i class="fa fa-check"></i>RMarkdown</a></li>
 <li class="chapter" data-level="" data-path="appendix-resources.html"><a href="appendix-resources.html#rstudio"><i class="fa fa-check"></i>RStudio</a></li>
@@ -216,6 +220,75 @@
 <p><img src="images/04-example2_4.png" />
 6. Commit the changes to the “/data”, “/scripts”, “website”, and “/docs” directories to your local repository
 7. Push the changes to the GitHub repository to update the website and share the interactive map with the team</p>
+</div>
+<div id="creating-a-new-page" class="section level2" number="4.8">
+<h2><span class="header-section-number">4.8</span> Creating a New Page</h2>
+<p>Creating a new page for the website requires a number of changes across the website source files.</p>
+<ol style="list-style-type: decimal">
+<li>Create a new RMarkdown file from the “File -&gt; New File” menu.</li>
+</ol>
+<p><img src="images/04-newpage_1.png" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Give the file an appropriate title and make sure HTML is the output format</li>
+</ol>
+<p><img src="images/04-newpage_2.png" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Save the file in the content directory: “/website/content/”</li>
+</ol>
+<p><img src="images/04-newpage_4.png" /></p>
+<ol start="4" style="list-style-type: decimal">
+<li>Open the “config.toml” configuration file located in “/website/”</li>
+</ol>
+<p><img src="images/04-newpage_3.png" /></p>
+<ol start="5" style="list-style-type: decimal">
+<li>Add the following entry to the configuration file to add the page to the navigation bar</li>
+</ol>
+<blockquote>
+<p>[[menu.main]]</p>
+<blockquote>
+<p>url = “/page_file_name/”</p>
+<p>name = “Pretty Page Name”</p>
+<p>weight = 5</p>
+</blockquote>
+</blockquote>
+<ul>
+<li>Note: The “url” should match the RMarkdown file name exactly, the “name” will be the name that appears on the website, and the weight (relative to other pages) will specify the order that the page will appear on the navigation bar</li>
+</ul>
+<p><img src="images/04-newpage_5.png" /></p>
+<ol start="6" style="list-style-type: decimal">
+<li>Run the “website_preview.R” script to build and preview the changes</li>
+</ol>
+</div>
+<div id="creating-a-new-update-post" class="section level2" number="4.9">
+<h2><span class="header-section-number">4.9</span> Creating a New Update Post</h2>
+<p>Creating a new update post for the website consists of a few steps.</p>
+<ol style="list-style-type: decimal">
+<li>Change your working directory to the “/website/” directory if you haven’t already</li>
+</ol>
+<ul>
+<li>Note: Using the R package ‘here’ makes this even easier</li>
+</ul>
+<blockquote>
+<p>setwd(here(“website”))</p>
+<p>or</p>
+<p>setwd(“./website”) # assumes you are in project root</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>Use the blogdown function “new_post” to generate the new post</li>
+</ol>
+<blockquote>
+<p>blogdown::new_post(“Update Post Title”, subdir = “updates”)</p>
+</blockquote>
+<ul>
+<li>Note: Blogdown is a layer on-top of a static site generator Hugo which uses the “posts” directory for all new posts. You have to specify ‘subdir = “updates”’ to get the new posts to appear in the “updates” directory; otherwise you will have to move your Markdown post from the “posts” directory to the “updates” directory.</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>A new Markdown file will open with your specified title and a template for the post</li>
+</ol>
+<p><img src="images/04-newpost_1.png" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Modify the post file to your liking and run the “website_preview.R” script to preview the changes</li>
+</ol>
 
 </div>
 </div>
