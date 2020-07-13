@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 Git Introduction | Project Primer</title>
+  <title>Project OSF Page | Project Primer</title>
   <meta name="description" content="How-to documentation for the COVID-19 DCTT BCS-2032203 project that covers Git, RStudio, RMarkdown, and project specifics." />
   <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 Git Introduction | Project Primer" />
+  <meta property="og:title" content="Project OSF Page | Project Primer" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 Git Introduction | Project Primer" />
+  <meta name="twitter:title" content="Project OSF Page | Project Primer" />
   
   <meta name="twitter:description" content="How-to documentation for the COVID-19 DCTT BCS-2032203 project that covers Git, RStudio, RMarkdown, and project specifics." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="using-git-in-rstudio.html"/>
+<link rel="prev" href="appendix-resources.html"/>
+
 <script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -116,8 +116,8 @@
 <li class="chapter" data-level="" data-path="appendix-resources.html"><a href="appendix-resources.html#rmarkdown"><i class="fa fa-check"></i>RMarkdown</a></li>
 <li class="chapter" data-level="" data-path="appendix-resources.html"><a href="appendix-resources.html#rstudio"><i class="fa fa-check"></i>RStudio</a></li>
 <li class="chapter" data-level="" data-path="appendix-resources.html"><a href="appendix-resources.html#project-source-code"><i class="fa fa-check"></i>Project Source Code</a></li>
-<li class="chapter" data-level="" data-path="appendix-resources.html"><a href="appendix-resources.html#project-osf-page"><i class="fa fa-check"></i>Project OSF Page</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="project-osf-page.html"><a href="project-osf-page.html"><i class="fa fa-check"></i>Project OSF Page</a></li>
 <li class="divider"></li>
 <li><a href="" target="blank"></a></li>
 
@@ -138,63 +138,18 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="git-introduction" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Git Introduction</h1>
-<div id="what-is-git" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> What is Git?</h2>
-<p>Git is a distributed version control system that was developed by Linus Torvalds for working on the Linux kernel. Despite its original use case, it is used for many software projects. It has become a popular choice for version control systems and becomes a powerful tool once the basics are learned.</p>
-<p>Users traditionally interface with Git through a Unix shell, or commandline environment, but there are several graphical or GUI options for interfacing with the tool. More information about this can be found in the Appendix section of this documentation.</p>
-<p>Git, and version control systems more generally, enable users to store different versions of files and keep track of changes between those versions. Git helps users document a history of changes, including mistakes, to their projects and enables them to switch to any past version. The result is essentially a list of different versions of a project that represent its state during a given time.</p>
-</div>
-<div id="what-is-a-repository" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> What is a Repository?</h2>
-<p>A Git repository is a directory, or folder, where version tracking and history has been initialized. One can check if version tracking is initialized in a directory by looking for a hidden “.git” subdirectory (you may have to enable a, “show hidden files” feature in your file manager if you wish to do this). This hidden directory stores metadata about a project, metadata of the files in that project, and the detailed history of that project. Note that the actual project files reside in the directory that contains the hidden “.git” directory, not the “.git” directory itself.</p>
-<p>A repository is an entity that is local in nature, meaning it resides on your machine and you treat it the same way you would any other file. As a result, any changes you make are yours and you must deliberately choose to share those changes if you want others to see them.</p>
-</div>
-<div id="what-is-a-commit" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> What Is A Commit?</h2>
-<p>A commit is a change to a repository and you do this when you implement a change to your project. This change can be as simple as the addition of a new file to your project or as complex as a series of changes across multiple files. A user “commits” to a repository when they want to store a new version of a project. When this is done, they now have a distinct version of the project that they can go back to and view the changes from one version to another.</p>
-<p>Generally, commits should contain a change that is singular in purpose. If two separate parts of a project were to be changed, they should be “committed” to the repository separately. A commit represents a point in time, a specific version of your project, and if two changes representing separate parts of a project were to end up in the same commit, then it would make the history of your project confusing or not clear. It is desirable to be able to understand the evolution of a project as changes are made and this becomes more difficult if changes are not distinct.</p>
-<p>A commit will have a message associated with it. This message should describe why changes were made and what purpose these changes fulfill. Each commit will have a log of what aspects of your project have changed and a commit message should also briefly describe what changes were made if they are not self-explanatory.</p>
-<p>For the sake of argument, let’s say you change a readme file to include a link to a funding page for your project. The following is an example of a poor commit message.</p>
-<blockquote>
-<p>Changed the readme.</p>
-</blockquote>
-<p>A better message would be:</p>
-<blockquote>
-<p>Added a link to the funding page.</p>
-</blockquote>
-<p>An even better message would be:</p>
-<blockquote>
-<p>Added a link to the funding page in the reference section of the readme. Those who want to fund the project no longer have to email asking how to support it.</p>
-</blockquote>
-</div>
-<div id="understanding-distributed" class="section level2" number="1.4">
-<h2><span class="header-section-number">1.4</span> Understanding Distributed</h2>
-<p>As was stated previously, Git is a distributed version control system which means that every repository, including ones on your local machine, do not require some centralized service to function.</p>
-<p>When you share changes with others, you are simply merging histories or syncing changes rather than performing some sort of special transaction with a centralized service. It is important to have a conceptual understanding of this because this is how you use Git when working on a project. You make and commit changes locally, then you can share those changes with the rest of the world. You cannot share changes with the rest of the world if you have not committed those changes locally.</p>
-</div>
-<div id="push" class="section level2" number="1.5">
-<h2><span class="header-section-number">1.5</span> Push</h2>
-<p>The act of “push”, or “pushing”, is when changes are uploaded to remote locations. Once a change is made and committed to your local repository, you can then send a copy of your changes to a remote location (push). This remote location is simply housing another copy of that repository. Anyone with the proper permissions can push to a remote repository so that someone else can download (pull) their changes.</p>
-</div>
-<div id="pull" class="section level2" number="1.6">
-<h2><span class="header-section-number">1.6</span> Pull</h2>
-<p>The act of “pull”, or “pulling”, is when changes are downloaded from remote locations. If someone pushes a change into a remote repository, you can download (pull) that change and sync it with your local repository. Anyone can pull changes from a remote repository and sync it with their local version. This is also how repositories are initially downloaded if they are not present on your machine.</p>
-</div>
-<div id="the-log" class="section level2" number="1.7">
-<h2><span class="header-section-number">1.7</span> The Log</h2>
-<p>Each Git repository has its own history that details which files have changed, who changed them, and their stated reasons for changing them. This can be viewed by using the log functionality of Git. The log will give you an overview of each project change by showing all the aforementioned information as well as detailing the exact changes. This can be used to track project changes and understand its history.</p>
+<div id="project-osf-page" class="section level1 unnumbered" number="">
+<h1>Project OSF Page</h1>
+<p><a href="https://osf.io/kpvbq/">OSF</a></p>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="using-git-in-rstudio.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="appendix-resources.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

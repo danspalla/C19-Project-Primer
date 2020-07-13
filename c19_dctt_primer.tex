@@ -73,7 +73,7 @@
 
 \title{Project Primer}
 \author{Dan Spalla}
-\date{2020-06-30}
+\date{2020-07-13}
 
 \begin{document}
 \maketitle
@@ -328,7 +328,11 @@ You can click on each commit, read each commit changes, and see what files in th
 \hypertarget{what-is-markdown}{%
 \section{What is Markdown?}\label{what-is-markdown}}
 
-Markdown is a markup language that enables a user to type a certain syntax and always generate the same output documents. There are no hidden characters or special formatting, that you would inevitably encounter using a word processor, which could cause unwanted changes to appearance of a document. Please see the, ``Markdown Introductory Tutorial'' in the appendix for a basic interactive tutorial.
+Markdown is a markup language that enables a user to type a certain syntax and always generate the same output documents. There are no hidden characters or special formatting, that you would inevitably encounter using a word processor, which could cause unwanted changes to appearance of a document. Please see the, ``Markdown Introductory Tutorial'' in the appendix - \href{https://www.markdowntutorial.com/lesson/1/}{or click here} - for a basic interactive tutorial. You can also see the, ``Online Markdown Editor'' link in the appendix - \href{https://markdown-editor.github.io/}{or click here} - to experiment with Markdown editing in your web browser.
+
+An example of Markdown text using the editor mentioned above is shown below.
+
+\includegraphics{images/03-rmarkdown_3.png}
 
 \hypertarget{what-is-rmarkdown}{%
 \section{What is RMarkdown?}\label{what-is-rmarkdown}}
@@ -349,6 +353,14 @@ There are two ways to include R code in an RMarkdown document. The first is to s
 To load a R script from a file, simply add ``code = readlines(''location\_to\_file``)'' and specify the path to the file.
 
 \includegraphics{images/04-example2_3.png}
+
+You can also embed and run R code by typing it in the code block instead of listing the location to a file. The following code snippet uses R libraries ``here'' and ``DT'' to display a csv file as an interactive table.
+
+\includegraphics{images/03-rmarkdown_4.png}
+
+The following is how the table is rendered when RMarkdown outputs the document as an HTML file.
+
+\includegraphics{images/03-rmarkdown_5.png}
 
 \hypertarget{contribution-to-project}{%
 \chapter{Contribution to Project}\label{contribution-to-project}}
@@ -663,6 +675,8 @@ blogdown::new\_post(``Update Post Title'', subdir = ``updates'')
 
 \href{https://www.markdowntutorial.com/lesson/1/}{Markdown Introductory Tutorial}
 
+\href{https://markdown-editor.github.io/}{Online Markdown Editor}
+
 \hypertarget{r}{%
 \section*{R}\label{r}}
 \addcontentsline{toc}{section}{R}
@@ -686,6 +700,12 @@ blogdown::new\_post(``Update Post Title'', subdir = ``updates'')
 \addcontentsline{toc}{section}{Project Source Code}
 
 \href{https://github.com/Peter-Kedron/COVID-19-Digital-Contact-Tracing-and-Geospatial-Technologies-and-Privacy}{GitHub}.
+
+\hypertarget{project-osf-page}{%
+\section*{Project OSF Page}\label{project-osf-page}}
+\addcontentsline{toc}{section}{Project OSF Page}
+
+\href{https://osf.io/kpvbq/}{OSF}
 
   \bibliography{book.bib,packages.bib}
 

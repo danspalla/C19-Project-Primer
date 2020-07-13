@@ -24,7 +24,7 @@
 <meta name="author" content="Dan Spalla" />
 
 
-<meta name="date" content="2020-06-30" />
+<meta name="date" content="2020-07-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -116,6 +116,7 @@
 <li class="chapter" data-level="" data-path="appendix-resources.html"><a href="appendix-resources.html#rmarkdown"><i class="fa fa-check"></i>RMarkdown</a></li>
 <li class="chapter" data-level="" data-path="appendix-resources.html"><a href="appendix-resources.html#rstudio"><i class="fa fa-check"></i>RStudio</a></li>
 <li class="chapter" data-level="" data-path="appendix-resources.html"><a href="appendix-resources.html#project-source-code"><i class="fa fa-check"></i>Project Source Code</a></li>
+<li class="chapter" data-level="" data-path="appendix-resources.html"><a href="appendix-resources.html#project-osf-page"><i class="fa fa-check"></i>Project OSF Page</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="" target="blank"></a></li>
@@ -141,7 +142,9 @@
 <h1><span class="header-section-number">Chapter 3</span> RMarkdown Introduction</h1>
 <div id="what-is-markdown" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> What is Markdown?</h2>
-<p>Markdown is a markup language that enables a user to type a certain syntax and always generate the same output documents. There are no hidden characters or special formatting, that you would inevitably encounter using a word processor, which could cause unwanted changes to appearance of a document. Please see the, “Markdown Introductory Tutorial” in the appendix for a basic interactive tutorial.</p>
+<p>Markdown is a markup language that enables a user to type a certain syntax and always generate the same output documents. There are no hidden characters or special formatting, that you would inevitably encounter using a word processor, which could cause unwanted changes to appearance of a document. Please see the, “Markdown Introductory Tutorial” in the appendix - <a href="https://www.markdowntutorial.com/lesson/1/">or click here</a> - for a basic interactive tutorial. You can also see the, “Online Markdown Editor” link in the appendix - <a href="https://markdown-editor.github.io/">or click here</a> - to experiment with Markdown editing in your web browser.</p>
+<p>An example of Markdown text using the editor mentioned above is shown below.</p>
+<p><img src="images/03-rmarkdown_3.png" /></p>
 </div>
 <div id="what-is-rmarkdown" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> What is RMarkdown?</h2>
@@ -155,6 +158,10 @@
 <p>There are two ways to include R code in an RMarkdown document. The first is to simply inline the code in the document itself and compile the document. The second way is to load the code from a file instead of inlining in the document. Loading the code from a file provides a nice separation between the data processing and data presentation of a R script. The second method should be used if the R code is lengthy, complicated, or needs to be worked on independent of successful RMarkdown document compilation.</p>
 <p>To load a R script from a file, simply add “code = readlines(”location_to_file“)” and specify the path to the file.</p>
 <p><img src="images/04-example2_3.png" /></p>
+<p>You can also embed and run R code by typing it in the code block instead of listing the location to a file. The following code snippet uses R libraries “here” and “DT” to display a csv file as an interactive table.</p>
+<p><img src="images/03-rmarkdown_4.png" /></p>
+<p>The following is how the table is rendered when RMarkdown outputs the document as an HTML file.</p>
+<p><img src="images/03-rmarkdown_5.png" /></p>
 
 </div>
 </div>
