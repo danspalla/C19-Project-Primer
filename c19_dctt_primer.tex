@@ -73,7 +73,7 @@
 
 \title{Project Primer}
 \author{Dan Spalla}
-\date{2020-07-13}
+\date{2020-07-23}
 
 \begin{document}
 \maketitle
@@ -594,7 +594,8 @@ weight = 5
 \hypertarget{creating-a-new-update-post}{%
 \section{Creating a New Update Post}\label{creating-a-new-update-post}}
 
-Creating a new update post for the website consists of a few steps.
+Creating a new update post for the website can been consists of a few steps.
+A new update post can be created in two ways. The first is to run the interactive script to add a new post. The script is located in the scripts folder and is aptly named, ``website\_new\_update\_post.R''. The second way is to follow the steps below.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -626,13 +627,13 @@ setwd(``./website'') \# assumes you are in project root
 \end{enumerate}
 
 \begin{quote}
-blogdown::new\_post(``Update Post Title'', subdir = ``updates'')
+blogdown::new\_post(``Update Post Title'', subdir = ``projectupdates'')
 \end{quote}
 
 \begin{itemize}
 \tightlist
 \item
-  Note: Blogdown is a layer on-top of a static site generator Hugo which uses the ``posts'' directory for all new posts. You have to specify `subdir = ``updates''\,' to get the new posts to appear in the ``updates'' directory; otherwise you will have to move your Markdown post from the ``posts'' directory to the ``updates'' directory.
+  Note: Blogdown is a layer on-top of a static site generator Hugo which uses the ``posts'' directory for all new posts. You have to specify `subdir = ``projectupdates''\,' to get the new posts to appear in the ``projectupdates'' directory; otherwise you will have to move your Markdown post from the ``posts'' directory to the ``projectupdates'' directory.
 \end{itemize}
 
 \begin{enumerate}

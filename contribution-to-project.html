@@ -24,7 +24,7 @@
 <meta name="author" content="Dan Spalla" />
 
 
-<meta name="date" content="2020-07-13" />
+<meta name="date" content="2020-07-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -262,7 +262,8 @@
 </div>
 <div id="creating-a-new-update-post" class="section level2" number="4.9">
 <h2><span class="header-section-number">4.9</span> Creating a New Update Post</h2>
-<p>Creating a new update post for the website consists of a few steps.</p>
+<p>Creating a new update post for the website can been consists of a few steps.
+A new update post can be created in two ways. The first is to run the interactive script to add a new post. The script is located in the scripts folder and is aptly named, “website_new_update_post.R”. The second way is to follow the steps below.</p>
 <ol style="list-style-type: decimal">
 <li>Change your working directory to the “/website/” directory if you haven’t already</li>
 </ol>
@@ -278,10 +279,10 @@
 <li>Use the blogdown function “new_post” to generate the new post</li>
 </ol>
 <blockquote>
-<p>blogdown::new_post(“Update Post Title”, subdir = “updates”)</p>
+<p>blogdown::new_post(“Update Post Title”, subdir = “projectupdates”)</p>
 </blockquote>
 <ul>
-<li>Note: Blogdown is a layer on-top of a static site generator Hugo which uses the “posts” directory for all new posts. You have to specify ‘subdir = “updates”’ to get the new posts to appear in the “updates” directory; otherwise you will have to move your Markdown post from the “posts” directory to the “updates” directory.</li>
+<li>Note: Blogdown is a layer on-top of a static site generator Hugo which uses the “posts” directory for all new posts. You have to specify ‘subdir = “projectupdates”’ to get the new posts to appear in the “projectupdates” directory; otherwise you will have to move your Markdown post from the “posts” directory to the “projectupdates” directory.</li>
 </ul>
 <ol start="2" style="list-style-type: decimal">
 <li>A new Markdown file will open with your specified title and a template for the post</li>
