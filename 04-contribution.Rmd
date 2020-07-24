@@ -110,7 +110,8 @@ Creating a new page for the website requires a number of changes across the webs
 6. Run the "website_preview.R" script to build and preview the changes
 
 ## Creating a New Update Post
-Creating a new update post for the website consists of a few steps.
+Creating a new update post for the website can been consists of a few steps.
+A new update post can be created in two ways. The first is to run the interactive script to add a new post. The script is located in the scripts folder and is aptly named, "website_new_update_post.R". The second way is to follow the steps below.
 
 1. Change your working directory to the "/website/" directory if you haven't already
 + Note: Using the R package 'here' makes this even easier
@@ -123,9 +124,9 @@ Creating a new update post for the website consists of a few steps.
 
 2. Use the blogdown function "new_post" to generate the new post
 
-> blogdown::new_post("Update Post Title", subdir = "updates")
+> blogdown::new_post("Update Post Title", subdir = "projectupdates")
 
-+ Note: Blogdown is a layer on-top of a static site generator Hugo which uses the "posts" directory for all new posts. You have to specify 'subdir = "updates"' to get the new posts to appear in the "updates" directory; otherwise you will have to move your Markdown post from the "posts" directory to the "updates" directory.
++ Note: Blogdown is a layer on-top of a static site generator Hugo which uses the "posts" directory for all new posts. You have to specify 'subdir = "projectupdates"' to get the new posts to appear in the "projectupdates" directory; otherwise you will have to move your Markdown post from the "posts" directory to the "projectupdates" directory.
 
 2. A new Markdown file will open with your specified title and a template for the post
 
