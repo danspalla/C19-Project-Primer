@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Project Primer</title>
+  <title>Install Guide | Project Primer</title>
   <meta name="description" content="How-to documentation for the COVID-19 DCTT BCS-2032203 project that covers Git, RStudio, RMarkdown, and project specifics." />
   <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Project Primer" />
+  <meta property="og:title" content="Install Guide | Project Primer" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Project Primer" />
+  <meta name="twitter:title" content="Install Guide | Project Primer" />
   
   <meta name="twitter:description" content="How-to documentation for the COVID-19 DCTT BCS-2032203 project that covers Git, RStudio, RMarkdown, and project specifics." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="git-introduction.html"/>
+<link rel="prev" href="contribution-to-project.html"/>
+<link rel="next" href="appendix.html"/>
 <script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -144,24 +144,75 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Project Primer</h1>
-<p class="author"><em>Dan Spalla</em></p>
-<p class="date"><em>2020-07-25</em></p>
+<div id="install-guide" class="section level1 unnumbered" number="">
+<h1>Install Guide</h1>
+<p>All of these components are needed to work on the project website, use the project helper scripts, and generate the interactive map.</p>
+<div id="installing-git-on-windows" class="section level2 unnumbered" number="">
+<h2>Installing Git on Windows</h2>
+<p>Installing Git on Windows first requires you to download the installer at <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>. Download and run the installer.</p>
+<p><img src="images/05-git_1.png" /></p>
+<p>The Git installer for Windows is unnecessarily long and new users should continually click next through the options, leaving the defaults, until they finally reach the install button. This process is showcased below.</p>
+<p><img src="images/05-git_2.png" /></p>
+<p><img src="images/05-git_3.png" /></p>
+<p><img src="images/05-git_4.png" /></p>
+<p><img src="images/05-git_5.png" /></p>
+<p><img src="images/05-git_6.png" /></p>
+<p><img src="images/05-git_7.png" /></p>
+<p><img src="images/05-git_8.png" /></p>
+<p><img src="images/05-git_9.png" /></p>
+<p><img src="images/05-git_10.png" /></p>
+<p><img src="images/05-git_11.png" /></p>
+<p><img src="images/05-git_12.png" /></p>
+<p>Finally, the install button will appear and you should click it as soon as possible to end this elongated installation experience.</p>
+<p><img src="images/05-git_13.png" /></p>
+<p>Git for Windows will then finally install.</p>
+<p><img src="images/05-git_14.png" /></p>
+<p><img src="images/05-git_15.png" /></p>
+<p>Click the next button to exit the installer.</p>
 </div>
-<div id="preface" class="section level1 unnumbered" number="">
-<h1>Preface</h1>
-<p>This documentation is a primer for the COVID-19 DCTT BCS-2032203 project. It covers an introduction to Git, using Git in RStudio, an introduction to RMarkdown, the project repository, and project helper scripts.</p>
-<p>This documentation assumes an introductory understanding of the R programming language and RStudio. It also assumes zero knowledge of Git, using Git in RStudio, and RMarkdown; consequently, some explanations may be structured or phrased in a way that are conducive to understanding but not perfectly accurate.</p>
+<div id="installing-r-on-windows" class="section level2 unnumbered" number="">
+<h2>Installing R on Windows</h2>
+<p>Go to <a href="https://cran.r-project.org/">https://cran.r-project.org/</a> in your web browser to download the R installer. Then select, “Download for Windows” (or your operating system).</p>
+<p><img src="images/05-r_1.png" /></p>
+<p>Then select, “base” to download the base R installer.</p>
+<p><img src="images/05-r_2.png" /></p>
+<p><img src="images/05-r_3.png" /></p>
+<p>Then finally download the installer for Windows. When you open the installer, select, “English” or your language of choice.</p>
+<p><img src="images/05-r_4.png" /></p>
+<p>Accept the default options and continually click next on the installer.</p>
+<p><img src="images/05-r_5.png" /></p>
+<p><img src="images/05-r_6.png" /></p>
+<p><img src="images/05-r_7.png" /></p>
+<p><img src="images/05-r_8.png" /></p>
+<p><img src="images/05-r_9.png" /></p>
+<p>Clicking next will actually install R for Windows.</p>
+<p><img src="images/05-r_10.png" /></p>
+<p><img src="images/05-r_11.png" /></p>
+<p><img src="images/05-r_12.png" /></p>
+<p>Click, “Finish” to end the installer.</p>
+</div>
+<div id="installing-rstudio-on-windows" class="section level2 unnumbered" number="">
+<h2>Installing RStudio on Windows</h2>
+<p>Go to <a href="https://rstudio.com/products/rstudio/download/#download">https://rstudio.com/products/rstudio/download/#download</a> in your web browser. Click the large download button or select the operating system you want to install for.</p>
+<p><img src="images/05-rstudio_1.png" /></p>
+<p>Continually click next until your reach the install button.</p>
+<p><img src="images/05-rstudio_2.png" /></p>
+<p><img src="images/05-rstudio_3.png" /></p>
+<p>Then install RStudio.</p>
+<p><img src="images/05-rstudio_4.png" /></p>
+<p><img src="images/05-rstudio_5.png" /></p>
+<p>Click, “Finish” to end the installer.</p>
+<p><img src="images/05-rstudio_6.png" /></p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="git-introduction.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="contribution-to-project.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="appendix.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
